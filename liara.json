@@ -1,0 +1,5 @@
+{
+	"platform": "node",
+	"app": "taskmanager",
+	"port": 5000
+}

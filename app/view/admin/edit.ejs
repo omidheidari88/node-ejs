@@ -1,0 +1,283 @@
+
+ 
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-rtl.min.css" />
+    <link href="/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="/assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+  
+    <link rel="stylesheet" href="/assets/css/adminstyle.css" />
+	<link rel="stylesheet" href="/assets/css/adminvazir.css" />
+    <link rel="stylesheet" href="/assets/css/adminhome.css" />
+	<link rel="icon" type="image/png" href="/assets/images/favicon.ico" /> 
+
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" style="margin-right: 0px" href="index.html">Admin Pannel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+<!--                 
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto navbar-right-top">
+                        <a href="/logout" class="btn btn-sm btn-danger ml-sm-4">خروج</a>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto navbar-right-top">
+                        <a href="/logout" class="btn btn-sm btn-success ml-sm-4">ورود</a>
+                    </ul>
+                </div> -->
+                <div class="card-header">
+                    <a href="/" class="btn btn-outline-primary navbar-right-top  btn-icon">
+                            <i class="material-icons">
+                               home
+                            </i>
+                            <span>خانه</span>
+                           </a> 
+                        	<a href="/auth/logout" class="btn btn-outline-danger navbar-right-top  btn-icon">
+                            <i class="material-icons">
+                                lock_open
+                            </i>
+                            <span>خروج</span>
+                        </a> 
+                </div>
+
+
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">داشبورد</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column" style="padding-right: 0px">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-fw fa-user-circle"></i>داشبورد<span
+                                        class="badge badge-success">10</span></a>
+                                <div id="submenu-1" class="collapse submenu">
+                                    <ul class="nav flex-column" style="padding-right: 20px">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/dashboard-finance">نمونه 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/dashboard-sales">نمونه 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-2" aria-controls="submenu-2"><i
+                                        class="fa fa-fw fa-rocket"></i>دوره ها</a>
+                                <div id="submenu-2" class="collapse submenu">
+                                    <ul class="nav flex-column" style="padding-right: 20px">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/edit-course">ویرایش دوره </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/course-manager">مدیریت دوره ها</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-3" aria-controls="submenu-3"><i
+                                        class="fas fa-fw fa-chart-pie"></i>مقالات</a>
+                                <div id="submenu-3" class="collapse submenu">
+                                    <ul class="nav flex-column" style="padding-right: 20px">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/chart-c3">ایجاد مقاله جدید</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/chart-chartist">مدیریت مقاله ها</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-4" aria-controls="submenu-4"><i
+                                        class="fab fa-fw fa-wpforms"></i>سفارشات</a>
+                                <div id="submenu-4" class="collapse submenu">
+                                    <ul class="nav flex-column" style="padding-right: 20px">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/influencer-profile">نمونه 1</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                
+					<%- include('../partials/messages') %>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                        style="padding-right: 0px;padding-left: 0px;">
+                        <div class="card">
+                                <h5 class="card-header">ویرایش دوره</h5>
+                            <div class="card-body">
+                        
+                                <form id="validationform" data-parsley-validate="" novalidate="" action="/admin/edit/<%= course.course_id %>?method=POST" method="POST" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label for="title" class="control-label font-weight-bold">عنوان دوره</label>
+                                            <input type="text" class="form-control" name="title" id="title" value="<%=course.title%>">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label for="type"
+                                                class="control-label font-weight-bold font-weight-bold">نوع دوره</label>
+                                            <select name="type" id="type" class="form-control">
+                                                <option value="vip" <%= course.type ==='vip' ? 'selected' :''%>>اعضای ویژه</option>
+                                                <option value="cash" <%= course.type ==='cash' ? 'selected' :''%></option>نقدی</option>
+                                                <option value="free"  <%= course.type ==='free' ? 'selected' :''%>>رایگان</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label for="descript" class="control-label font-weight-bold">متن</label>
+                                            <textarea rows="5" class="form-control" name="descript" id="descript"><%=course.descript%></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label for="time" class="control-label font-weight-bold">زمان</label>
+                                                <input type="text" class="form-control" name="time" id="time"
+                                                value="<%=course.time%>">   
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label for="images" class="control-label font-weight-bold">تصویر
+                                         دوره</label>
+
+                                            <input type="file" class="form-control" name="images" id="images"
+                                                placeholder="تصویر مقاله را وارد کنید">
+                                        </div>
+                            
+                                    </div>
+                                    <%if( course.images !=null ||course.images !=undefined ){ %>
+                                    <div class="form-group row">
+                                    <% Object.entries(course.images).forEach(([size,image])=>{%>
+                                        <div class="col-sm-3">
+                                                <%= size %>     
+                                            <label class="control-label">
+                                                <a href="<%-image%>">
+                                                <img src="<%-image%>" alt="" width="50%" >
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <%})  %> 
+                                    </div>
+                                    <%} %>
+                                    
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label for="price" class="control-label font-weight-bold">قیمت</label>
+                                            <input type="text" class="form-control" name="price" id="price"
+                                                value="<%=course.price%>">
+                                        </div>
+                                        <div class="col">
+                                            <label for="tags" class="control-label font-weight-bold">تگ ها</label>
+                                            <input type="text" class="form-control" name="tags" id="tags"
+                                            value="<%=course.tags%>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row text-right">
+                                        <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                                            <button type="submit" class="btn btn-space btn-primary">ارسال</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end valifation types -->
+                    <!-- ============================================================== -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader  -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- end sales traffice country source  -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end wrapper  -->
+    <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="/assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="/assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="/assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="/assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="/assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="/assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="/assets/libs/js/dashboard-ecommerce.js"></script>
+    
+</body>
+
