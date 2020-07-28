@@ -1,0 +1,11 @@
+const {isAdmin, authMiddleware, courseValidator} = require('../auth/middleware');
+const {upload, fileToField} = require('./middleware');
+const {adminPannel, store, remove, showEditCourse, updateCourse} = require('./controller');
+const express = require('express');
+const router = express.Router();
+router.get('/', [authMiddleware, isAdmin], adminPannel);
+router.get('/edit/:id', showEditCourse);
+router.post('/edit/:id', [upload.single('images'), fileToField, courseValidator], updateCourse);
+router.post('/', [upload.single('images'), fileToField, courseValidator], store);
+router.get('/delete/:id', remove);
+module.exports = router;
