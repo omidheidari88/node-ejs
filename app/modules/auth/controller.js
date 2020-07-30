@@ -10,6 +10,7 @@ exports.showLogin = async (req, res) => {
 	res.render('auth/login', {message});
 };
 exports.doLogin = async (req, res, next) => {
+	console.log(req.body);
 	const {email, password, remember} = req.body;
 	const messages = [];
 	const result = validationResult(req);
